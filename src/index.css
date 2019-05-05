@@ -12,3 +12,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.showData {
+  padding: 20px;
+  border: 1px solid rgb(91, 118, 210);
+  width: 300px;
+  height: 230px;
+  padding: 10px;
+}
+
+.homeComponent {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  width: 900px;
+  justify-content: space-evenly;
+}
+
+.homeButtons{
+  width: 200px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primaryButton {
+  padding-top: 20px
+}
+
+.empInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showDataContainer {
+  position: absolute;
+  right: 50%;
+}
