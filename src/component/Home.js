@@ -79,7 +79,7 @@ class Home extends Component {
             options={
               this.state.selectedDepartment.key === "HR"
                 ? optionsHR
-                : optionsEngineering
+                : (this.state.selectedDepartment.key === "ENGINEERING" ? optionsEngineering : [])
             }
             onChange={this._onIdChange}
             placeholder="Select Employee Id"
@@ -104,7 +104,7 @@ class Home extends Component {
           {this.state.isLoading ? (
             <Spinner type={SpinnerType.large} label=" loading..." />
           ) : (
-            this.state.data.data && <ShowData myData={this.state.data} />
+            this.state.data.data ? <ShowData myData={this.state.data}/> : <p>{this.state.data.toString().includes("Error") && ` Something went wrong ${this.state.data}`}</p>
           )}
         </div>
       </div>
